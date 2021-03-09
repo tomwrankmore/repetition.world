@@ -1,0 +1,26 @@
+main {
+    width: 1024px;
+    background-color: #333;
+    margin: 0 auto;
+    padding: 4rem;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 120px 1fr;
+}
+
+h1 {
+    color: tomato;
+    grid-column: 1/2;
+}
+
+p {
+    color: white;
+    grid-column: 1/2;
+}
+
+.img {
+    width: 100%;
+    grid-column: 2/3;
+    grid-row: 1 / span 2;
+}
