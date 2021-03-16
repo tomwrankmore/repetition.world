@@ -1,16 +1,62 @@
+
+@font-face {
+    font-family: 'Pilowlava-Regular';
+    src: url('../fonts/Pilowlava-Regular.otf') format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Pilowlava-Regular';
 }
 
 main {
     width: 100vw;
     height: 100vh;
-    background-image: url('../assets/images/joy-weathered-web.jpg');
+    /* background-image: url('../assets/images/joy-weathered-web.jpg'); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #333;
-
+    background-color: #111115;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+h1 {
+    color: #d83b3b;
+    background-color: #111115;
+    padding: 4rem;
+    /* font-size: clamp(1rem, 10vw, 10rem);  */
+    animation-duration: 22s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes slidein {
+    0% {
+        color: #d83b3b;
+        font-size: clamp(1rem, 10vw, 10rem); 
+    }
+  
+    25% {
+        color: #ff8fa0;
+    }
+
+    50% {
+        color: #7ba5de;
+    }
+
+    75% {
+        color: #ff8030;
+    }
+
+    100% {
+        color: #f5be49;
+        font-size: clamp(1rem, 12vw, 12rem); 
+    }
+  }
