@@ -40,7 +40,7 @@ h1 {
 @keyframes slidein {
     0% {
         color: #d83b3b;
-        font-size: clamp(1rem, 10vw, 10rem); 
+        font-size: clamp(1rem, 8vw, 10rem); 
     }
   
     25% {
@@ -57,6 +57,6 @@ h1 {
 
     100% {
         color: #f5be49;
-        font-size: clamp(1rem, 11vw, 11rem); 
+        font-size: clamp(1rem, 9vw, 9rem); 
     }
   }
