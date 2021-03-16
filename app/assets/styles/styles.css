@@ -57,6 +57,6 @@ h1 {
 
     100% {
         color: #f5be49;
-        font-size: clamp(1rem, 12vw, 12rem); 
+        font-size: clamp(1rem, 11vw, 11rem); 
     }
   }
