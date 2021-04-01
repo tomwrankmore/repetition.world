@@ -20,18 +20,21 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #111115;
+    background-color: #1d1d22;
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 h1 {
     color: #d83b3b;
-    background-color: #111115;
+    /* background-color: #d0d0ff; */
     padding: 4rem;
-    /* font-size: clamp(1rem, 10vw, 10rem);  */
-    animation-duration: 22s;
+    font-size: clamp(1rem, 8vw, 10rem); 
+    pointer-events: none;
+    perspective: 1000;
+    animation-duration: 10s;
     animation-name: slidein;
     animation-iteration-count: infinite;
     animation-direction: alternate;
@@ -40,7 +43,7 @@ h1 {
 @keyframes slidein {
     0% {
         color: #d83b3b;
-        font-size: clamp(1rem, 8vw, 10rem); 
+        /* font-size: clamp(1rem, 8vw, 10rem);  */
     }
   
     25% {
@@ -57,6 +60,6 @@ h1 {
 
     100% {
         color: #f5be49;
-        font-size: clamp(1rem, 9vw, 9rem); 
+        /* font-size: clamp(1rem, 9vw, 9rem);  */
     }
   }
