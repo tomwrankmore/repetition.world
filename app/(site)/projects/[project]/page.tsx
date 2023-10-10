@@ -17,11 +17,11 @@ const Project = async ({ params }: Props) => {
     <div className="flex items-start justify-between flex-col lg:flex-row">
       <div>
         <header>
-          <h1 className="text-2xl">{project.name}</h1>
+          <h1 className="text-2xl mb-4 underline">{project.name}</h1>
         </header>
 
         {/* Content goes here */}
-        <div className="text-lg text-gray-700 mt-5 w-full lg:w-3/4 prose prose-slate lg:prose-lg">
+        <div className="prose prose-slate">
           <Body blocks={project.content} />
           {/* <PortableText value={project.content} /> */}
         </div>
