@@ -7,8 +7,6 @@ import {soundcloud} from './soundcloud'
 import {spotify} from './spotify'
 import breaker from './break'
 import siteSettings from "./siteSettings";
-import colors from "./colors";
-import navigation from "./navigation";
 
 const schemas = [
   project,

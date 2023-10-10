@@ -7,13 +7,13 @@ export default async function Home() {
 
   return (
     <div>
-      <h1 className="text-center md:text-left text-xl md:text-3xl mb-12 w-full md:w-[40rem] tracking-[0.5rem]">Tom / Eliphino is a London based music producer, DJ &amp; composer.</h1>
+      <h1 className="text-center md:text-left text-xl md:text-xl mb-12 w-full md:w-[40rem] tracking-wide">Tom / Eliphino is a London based music producer, DJ &amp; composer.</h1>
       
       <ul className="w-full md:w-fit">
         {projects.map((project) => {
           return (
-            <li key={project._id} className="[&:not(:last-child)]:border-b">
-              <Link href={`/projects/${project.slug}`} className="p-4 block md:whitespace-nowrap hover:bg-gray-100 transition">
+            <li key={project._id} className="mb-2">
+              <Link href={`/projects/${project.slug}`} className="text-xs block md:whitespace-nowrap hover:underline">
                 {project?.name}
               </Link>
             </li>
