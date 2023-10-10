@@ -37,23 +37,14 @@ const Project = async ({ params }: Props) => {
           />
         )} */}
       </div>
-      <div className="mt-16 lg:mt-0">
-        {/* <a
-            href={project.url}
-            title="View Project"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gray-100 rounded-lg text-gray-500 font-bold py-3 px-4 whitespace-nowrap hover:bg-black hover:text-slate-100 transition block"
-          >
-            View project
-          </a> */}
+      {/* <div className="mt-16 lg:mt-0">
         <Link
           href="/"
           className="bg-gray-100 rounded-lg text-gray-500 font-bold py-3 px-4 whitespace-nowrap hover:bg-black hover:text-slate-100 transition block"
         >
           Back home &#x2196;
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 };
