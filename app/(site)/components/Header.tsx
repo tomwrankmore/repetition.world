@@ -4,7 +4,7 @@ import React from "react";
 const Header = () => {
   return (
     <header className="flex items-center justify-between flex-col md:flex-row">
-      <Link href="/" className="text-lg lowercase font-bold border-b">
+      <Link href="/" className="text-lg lowercase font-bold">
         repetition
       </Link>
 
