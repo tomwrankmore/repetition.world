@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className="flex items-center justify-between flex-col md:flex-row">
       <Link href="/" className="text-lg lowercase font-bold">
-        repetition
+        repetition ♻️
       </Link>
 
       <div className="flex items-center gap-3">

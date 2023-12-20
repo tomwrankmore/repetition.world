@@ -1,6 +1,7 @@
 import project from "./project-schema";
 import page from "./page-schema";
 import projectYouTubeLink from "./project-youtube-links";
+import categories from "./categories"
 import { blockContent } from "./blockContent";
 import {youtube} from './youtube'
 import {soundcloud} from './soundcloud'
@@ -18,6 +19,7 @@ const schemas = [
   soundcloud,
   siteSettings,
   spotify,
+  categories,
   // colors,
   // navigation,
 ]
