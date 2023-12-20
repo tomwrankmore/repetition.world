@@ -23,19 +23,7 @@ const Project = async ({ params }: Props) => {
         {/* Content goes here */}
         <div className="prose prose-slate">
           <Body blocks={project.content} />
-          {/* <PortableText value={project.content} /> */}
         </div>
-
-        {/* Image goes here */}
-        {/* {project.image && (
-          <Image
-            src={project.image}
-            alt={project.alt}
-            width={1920}
-            height={1080}
-            className="mt-10 border-2 border-gray-700 object-cover rounded-xl"
-          />
-        )} */}
       </div>
       {/* <div className="mt-16 lg:mt-0">
         <Link
