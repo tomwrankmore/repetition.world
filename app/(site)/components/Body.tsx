@@ -55,6 +55,13 @@ const myPortableTextComponents = {
       )
     },
   },
+  block: {
+    normal: ({ children }: any) => (
+      <p className="text-sm leading-relaxed mb-4">
+        {children}
+      </p>
+    ),
+  },
 };
 
 function Body({ blocks }:any) {
