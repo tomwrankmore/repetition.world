@@ -14,7 +14,8 @@ export async function getProjects(): Promise<Project[]> {
       "image": image.asset->url,
       url,
       content
-    }`
+    }`,
+    { next: { revalidate: 60 } }  
   );
 }
 
@@ -32,7 +33,8 @@ export async function getProject(slug: string): Promise<Project> {
       content
     }`,
     // the line below is how we pass in slug as a value from the function argument
-    { slug }
+    { slug },
+    { next: { revalidate: 60 } }
   );
 }
 
@@ -46,6 +48,7 @@ export async function getPages(): Promise<Page[]> {
       title,
       "slug": slug.current,
     }`,
+    { next: { revalidate: 60 } }
   )
 }
 
@@ -58,6 +61,7 @@ export async function getPage(slug: string): Promise<Page> {
       "slug": slug.current,
       content
     }`,
-    {slug}
+    {slug},
+    { next: { revalidate: 60 } }  
   )
 }
