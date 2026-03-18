@@ -1,9 +1,9 @@
 import React from "react";
 import { getProject } from "@/sanity/sanity-utils";
-import { PortableText } from "@portabletext/react";
-import Image from "next/image";
+// import { PortableText } from "@portabletext/react";
+// import Image from "next/image";
 import Body from "../../components/Body";
-import Link from "next/link";
+// import Link from "next/link";
 
 type Props = {
   params: { project: string };
