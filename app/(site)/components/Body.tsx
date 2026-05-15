@@ -47,6 +47,9 @@ const myPortableTextComponents = {
     },
   },
   marks: {
+    strong: ({children}: any) => {
+      return <strong className="text-white">{children}</strong>;
+    },
     link: ({children, value}:any) => {
       return (
         <a href={value.href} rel='noreferrer noopener' target="_blank">
@@ -57,7 +60,7 @@ const myPortableTextComponents = {
   },
   block: {
     normal: ({ children }: any) => (
-      <p className="text-sm leading-relaxed mb-4">
+      <p className="text-sm leading-relaxed mb-4 text-white">
         {children}
       </p>
     ),

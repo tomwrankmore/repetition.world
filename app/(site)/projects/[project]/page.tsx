@@ -13,8 +13,6 @@ const Project = async ({ params }: Props) => {
   const slug = params.project;
   const project = await getProject(slug);
 
-  console.log('project', project)
-
   return (
     <div className="">
       <div>
@@ -24,7 +22,7 @@ const Project = async ({ params }: Props) => {
           </h1>
         </header>
         <div className="flex items-start justify-between flex-col-reverse md:flex-row md:gap-8">
-          <div className="prose prose-slate md:flex-1">
+          <div className="prose text-white md:flex-1">
             <Body blocks={project.content} />
           </div>
 

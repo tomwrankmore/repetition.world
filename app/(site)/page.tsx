@@ -7,8 +7,8 @@ export default async function Home() {
 
   return (
     <div>
-      <h1 className="text-center md:text-left text-base mb-12 w-full md:w-[40rem] tracking-wide">London-based music producer, DJ and composer creating impactful, forward-thinking sound for brands, artists and screen.</h1>
-      
+      <h1 className="text-center md:text-left mb-12 text-base w-full md:w-[40rem] tracking-wide">London-based music producer, DJ and composer creating impactful, forward-thinking sound for brands, artists and screen.</h1>
+      <h2 className="text-center md:text-left tracking-wide mb-2 underline">Selected Work</h2>
       <ul className="w-full md:w-fit">
         {projects.map((project) => {
           return (
