@@ -26,7 +26,7 @@ const Project = async ({ params }: Props) => {
             <Body blocks={project.content} />
           </div>
 
-          {project.image ? (<div className="w-full md:w-[320px] shrink-0 mb-6 md:mb-0">
+          {/* {project.image ? (<div className="w-full md:w-[320px] shrink-0 mb-6 md:mb-0">
             <a href={project.url} target="_blank" referrerPolicy="no-referrer">
               <Image
                 src={project.image}
@@ -38,7 +38,7 @@ const Project = async ({ params }: Props) => {
                 quality={60}
                 priority={false}
               /></a>
-          </div>) : null}
+          </div>) : null} */}
         </div>
         <Link
           href="/"

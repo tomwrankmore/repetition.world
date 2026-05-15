@@ -52,7 +52,7 @@ const myPortableTextComponents = {
     },
     link: ({children, value}:any) => {
       return (
-        <a href={value.href} rel='noreferrer noopener' target="_blank">
+        <a href={value.href} rel='noreferrer noopener' target="_blank" className="text-white">
           {children}
         </a>
       )
