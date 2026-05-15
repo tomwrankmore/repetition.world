@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@portabletext/react": "^3.0.9",
     "@sanity/orderable-document-list": "^1.1.0",
     "@sanity/ui": "^1.8.2",
+    "gsap": "^3.15.0",
     "next": "latest",
     "next-sanity": "^5.5.4",
     "react": "latest",
