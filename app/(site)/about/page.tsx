@@ -15,6 +15,7 @@ gsap.registerPlugin(useGSAP, SplitText);
 const About = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
+  const imageAnimationRef = useRef<gsap.Context | null>(null);
 
   useGSAP(
     () => {
@@ -44,16 +45,21 @@ const About = () => {
           splitInstances.forEach((s) => s.revert());
         },
       });
-      gsap.from(imageRef.current, {
-        clipPath: "inset(0 100% 0 0)",  // fully clipped on the right
-        ease: "ease.inOut",
-        duration: 1.2,
-        delay: 0.15,
-      });
+
+      imageAnimationRef.current = gsap.context(() => { });
     },
 
     { scope: containerRef }
   );
+
+  const handleImageLoad = () => {
+    gsap.from(imageRef.current, {
+      clipPath: "inset(0 100% 0 0)",
+      ease: "sine.inOut",
+      duration: 1.2,
+      delay: 0.15,
+    });
+  };
 
   return (
     <div ref={containerRef} className="flex flex-col-reverse sm:flex-row gap-8 w-full items-start justify-between">
@@ -72,6 +78,7 @@ const About = () => {
           width={450}
           height={450}
           className="rounded-full sm:rounded-xl object-cover"
+          onLoad={handleImageLoad}
         />
       </div>
     </div>
