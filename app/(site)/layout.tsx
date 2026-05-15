@@ -1,11 +1,10 @@
 
 import type { Metadata } from "next";
-import { Jost, Noto_Sans_Mono } from "next/font/google";
+import { Noto_Sans_Mono } from "next/font/google";
 import "../globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-const jost = Jost({ subsets: ["latin"] });
 const noto_sans_mono = Noto_Sans_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
