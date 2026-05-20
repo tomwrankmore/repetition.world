@@ -20,13 +20,9 @@ const Project = async ({ params }: Props) => {
           </h1>
         </header>
         <div className="flex items-start justify-between flex-col-reverse md:flex-row md:gap-8">
-          {project.content ?
-            null :
-            <div className="prose text-white md:flex-1">
-              <Body blocks={project.content} />
-            </div>
-          }
-
+          <div className="prose text-white md:flex-1">
+            <Body blocks={project.content as any} />
+          </div>
 
           {/* {project.image ? (<div className="w-full md:w-[320px] shrink-0 mb-6 md:mb-0">
             <a href={project.url} target="_blank" referrerPolicy="no-referrer">
