@@ -1,7 +1,5 @@
 import React from "react";
 import { getProject } from "@/sanity/sanity-utils";
-// import { PortableText } from "@portabletext/react";
-import Image from "next/image";
 import Body from "../../components/Body";
 import Link from "next/link";
 
@@ -22,9 +20,13 @@ const Project = async ({ params }: Props) => {
           </h1>
         </header>
         <div className="flex items-start justify-between flex-col-reverse md:flex-row md:gap-8">
-          <div className="prose text-white md:flex-1">
-            <Body blocks={project.content} />
-          </div>
+          {project.content ?
+            null :
+            <div className="prose text-white md:flex-1">
+              <Body blocks={project.content} />
+            </div>
+          }
+
 
           {/* {project.image ? (<div className="w-full md:w-[320px] shrink-0 mb-6 md:mb-0">
             <a href={project.url} target="_blank" referrerPolicy="no-referrer">
