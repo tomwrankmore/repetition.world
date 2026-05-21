@@ -17,40 +17,40 @@ const About = () => {
   const imageRef = useRef<HTMLDivElement>(null);
   const imageAnimationRef = useRef<gsap.Context | null>(null);
 
-  useGSAP(
-    () => {
-      const paragraphs =
-        Array.from(containerRef.current?.querySelectorAll<HTMLParagraphElement>("p") ?? []);
+  // useGSAP(
+  //   () => {
+  //     const paragraphs =
+  //       Array.from(containerRef.current?.querySelectorAll<HTMLParagraphElement>("p") ?? []);
 
-      const splitInstances = paragraphs.map(
-        (p) => new SplitText(p, {
-          type: "lines",
-          linesClass: "split-line",
-          mask: "lines",
-        })
-      );
+  //     const splitInstances = paragraphs.map(
+  //       (p) => new SplitText(p, {
+  //         type: "lines",
+  //         linesClass: "split-line",
+  //         mask: "lines",
+  //       })
+  //     );
 
-      const allLines = splitInstances.flatMap((s) => s.lines);
+  //     const allLines = splitInstances.flatMap((s) => s.lines);
 
-      gsap.from(allLines, {
-        duration: 0.25,
-        y: "100%",
-        ease: "ease.inOut",
-        stagger: {
-          ease: "ease.inOut",
-          each: 0.08,
-        },
-        delay: 0.15,
-        onComplete: () => {
-          splitInstances.forEach((s) => s.revert());
-        },
-      });
+  //     gsap.from(allLines, {
+  //       duration: 0.25,
+  //       y: "100%",
+  //       ease: "ease.inOut",
+  //       stagger: {
+  //         ease: "ease.inOut",
+  //         each: 0.08,
+  //       },
+  //       delay: 0.15,
+  //       onComplete: () => {
+  //         splitInstances.forEach((s) => s.revert());
+  //       },
+  //     });
 
-      imageAnimationRef.current = gsap.context(() => { });
-    },
+  //     imageAnimationRef.current = gsap.context(() => { });
+  //   },
 
-    { scope: containerRef }
-  );
+  //   { scope: containerRef }
+  // );
 
   const handleImageLoad = () => {
     gsap.from(imageRef.current, {
@@ -78,7 +78,7 @@ const About = () => {
           width={450}
           height={450}
           className="rounded-full sm:rounded-xl object-cover"
-          onLoad={handleImageLoad}
+          // onLoad={handleImageLoad}
         />
       </div>
     </div>

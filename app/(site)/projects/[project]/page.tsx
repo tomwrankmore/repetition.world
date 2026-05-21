@@ -23,20 +23,6 @@ const Project = async ({ params }: Props) => {
           <div className="prose text-white md:flex-1">
             <Body blocks={project.content as any} />
           </div>
-
-          {/* {project.image ? (<div className="w-full md:w-[320px] shrink-0 mb-6 md:mb-0">
-            <a href={project.url} target="_blank" referrerPolicy="no-referrer">
-              <Image
-                src={project.image}
-                alt={project.name || "Project image"}
-                width={200}
-                height={300}
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 160px, 200px"
-                className="w-full h-auto object-cover rounded-lg"
-                quality={60}
-                priority={false}
-              /></a>
-          </div>) : null} */}
         </div>
         <Link
           href="/"

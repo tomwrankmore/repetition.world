@@ -1,7 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import dynamic from "next/dynamic";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(useGSAP);
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 import { PortableText } from "@portabletext/react";
 import type {
@@ -56,7 +60,22 @@ const myPortableTextComponents = {
 };
 
 function Body({ blocks }: { blocks: PortableTextBlock[] }) {
-  return <PortableText value={blocks} components={myPortableTextComponents} />;
+  const bodyRef = useRef<HTMLDivElement>(null);
+
+  // useGSAP(() => {
+  //   gsap.from(bodyRef.current?.children || [], {
+  //     duration: 1,
+  //     opacity: 0,
+  //     y: 20,
+  //     stagger: 0.1,
+  //   });
+  // }, { scope: bodyRef });
+
+  return (
+    <div ref={bodyRef}>
+      <PortableText value={blocks} components={myPortableTextComponents} />
+    </div>
+  );
 }
 
 export default Body;
