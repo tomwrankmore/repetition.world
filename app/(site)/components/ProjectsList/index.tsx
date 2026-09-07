@@ -31,18 +31,22 @@ export default function ProjectList({ projects }: { projects: Project[] }) {
         ease: "sine.inOut",
       });
     },
-    { dependencies: [activeIndex], scope: slotTrackRef }
+    { dependencies: [activeIndex], scope: slotTrackRef },
   );
+
+  console.log("projects", projects);
 
   return (
     <div className="flex flex-col md:flex-row gap-12 w-full">
-
       {/* Left column */}
       <div className="flex-1 min-w-0">
         <h1 className="text-center md:text-left mb-12 text-base tracking-wide">
-          London-based music producer, DJ and composer creating impactful, forward-thinking sound for brands, artists and screen.
+          London-based music producer, DJ and composer creating impactful,
+          forward-thinking sound for brands, artists and screen.
         </h1>
-        <h2 className="text-center md:text-left tracking-wide mb-2 underline">Selected Work</h2>
+        <h2 className="text-center md:text-left tracking-wide mb-2 underline">
+          Selected Work
+        </h2>
         <ul className="w-full md:w-fit mb-8">
           {projects.map((project, index) => (
             <li key={project._id} className="mb-2">

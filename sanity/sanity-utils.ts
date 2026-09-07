@@ -1,10 +1,9 @@
 import { Project } from "@/types/Project";
 import { Page } from "../types/Page";
 import { createClient, groq } from "next-sanity";
-import clientConfig from "./config/client-config"
+import clientConfig from "./config/client-config";
 
 export async function getProjects(): Promise<Project[]> {
-
   return createClient(clientConfig).fetch(
     groq`*[_type == "project"]|order(orderRank){
       _id,
@@ -15,12 +14,11 @@ export async function getProjects(): Promise<Project[]> {
       url,
       content
     }`,
-    { next: { revalidate: 60 } }  
+    { next: { revalidate: 0 } },
   );
 }
 
 export async function getProject(slug: string): Promise<Project> {
-
   return createClient(clientConfig).fetch(
     // project where slug.current is the same as the slug we pass in to getProject
     groq`*[_type == "project" && slug.current == $slug][0]{
@@ -34,7 +32,7 @@ export async function getProject(slug: string): Promise<Project> {
     }`,
     // the line below is how we pass in slug as a value from the function argument
     { slug },
-    { next: { revalidate: 60 } }
+    { next: { revalidate: 60 } },
   );
 }
 
@@ -48,8 +46,8 @@ export async function getPages(): Promise<Page[]> {
       title,
       "slug": slug.current,
     }`,
-    { next: { revalidate: 60 } }
-  )
+    { next: { revalidate: 60 } },
+  );
 }
 
 export async function getPage(slug: string): Promise<Page> {
@@ -61,7 +59,7 @@ export async function getPage(slug: string): Promise<Page> {
       "slug": slug.current,
       content
     }`,
-    {slug},
-    { next: { revalidate: 60 } }  
-  )
+    { slug },
+    { next: { revalidate: 60 } },
+  );
 }
