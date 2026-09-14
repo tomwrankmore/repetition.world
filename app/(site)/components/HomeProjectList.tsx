@@ -33,7 +33,10 @@ export default function HomeProjectList({ projects }: { projects: Project[] }) {
   // );
 
   return (
-    <ul ref={listRef} className="grid w-full grid-cols-3 gap-2">
+    <ul
+      ref={listRef}
+      className="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2"
+    >
       {projects.map((project) => (
         <li key={project._id}>
           <Link

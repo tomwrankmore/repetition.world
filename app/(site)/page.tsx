@@ -12,7 +12,7 @@ export default async function Home() {
         London-based music producer, DJ and composer creating impactful,
         forward-thinking sound for brands, artists and screen.
       </h1>
-      <h2 className="text-center md:text-left tracking-wide mb-2 underline">
+      <h2 className="text-center md:text-left tracking-wide mb-4 underline">
         Selected Work
       </h2>
       <HomeProjectList projects={projects} />
