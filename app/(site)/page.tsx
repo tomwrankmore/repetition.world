@@ -4,8 +4,6 @@ import HomeProjectList from "./components/HomeProjectList";
 export default async function Home() {
   const projects = await getProjects();
 
-  console.log("projects from home page", projects);
-
   return (
     <div>
       <h1 className="text-center md:text-left mb-12 text-base w-full md:w-[40rem] tracking-wide">

@@ -63,3 +63,16 @@ export async function getPage(slug: string): Promise<Page> {
     { next: { revalidate: 60 } },
   );
 }
+
+export async function getAboutPage(): Promise<Page> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "page" && slug.current == "about"][0]{
+      _id,
+      _createdAt,
+      title,
+      "slug": slug.current,
+      content
+    }`,
+    { next: { revalidate: 60 } },
+  );
+}

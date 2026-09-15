@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.projects_ul li > div {
+  opacity: 0;
+  /* transform: translateY(16px); */
+}
