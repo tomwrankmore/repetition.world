@@ -74,7 +74,9 @@ export default async function About() {
           components={{
             block: {
               normal: ({ children }) => (
-                <p className="text-sm mb-6">{children}</p>
+                <p className="text-sm mb-6 text-white [&_a]:text-white [&_a]:underline [&_a]:underline-offset-2 [&_a]:decoration-white">
+                  {children}
+                </p>
               ),
             },
           }}
