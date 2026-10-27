@@ -21,6 +21,7 @@ export default function SplitTextReveal<T extends ElementType = "div">({
   duration = 0.8,
   stagger = 0.08,
   yPercent = 100,
+  style,
   ...props
 }: SplitTextRevealProps<T>) {
   const Tag = as ?? "div";
@@ -34,12 +35,13 @@ export default function SplitTextReveal<T extends ElementType = "div">({
         mask: "lines",
         autoSplit: true,
         onSplit: (self) => {
-          gsap.set(element.current, { visibility: "visible" });
-          return gsap.fromTo(
+          const animation = gsap.fromTo(
             self.lines,
             { yPercent },
             { yPercent: 0, duration, delay, stagger, ease: "power3.out" },
           );
+          gsap.set(element.current, { visibility: "visible" });
+          return animation;
         },
       });
       return () => {
@@ -54,6 +56,7 @@ export default function SplitTextReveal<T extends ElementType = "div">({
         element.current = node;
       }}
       {...props}
+      style={{ ...style, visibility: "hidden" }}
     >
       {" "}
       {children}{" "}
